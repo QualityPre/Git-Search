@@ -15,3 +15,5 @@
 [github-api](https://docs.github.com/en/rest)
 
 [create-context](https://www.freecodecamp.org/news/react-context-for-beginners/)
+
+[reducers in React](https://www.robinwieruch.de/javascript-reducer/)
