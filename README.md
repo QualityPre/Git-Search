@@ -17,3 +17,5 @@
 [create-context](https://www.freecodecamp.org/news/react-context-for-beginners/)
 
 [reducers in React](https://www.robinwieruch.de/javascript-reducer/)
+
+[url search params](https://www.codegrepper.com/code-examples/javascript/frameworks/node_modules/new+URLSearchParams%28%29)
