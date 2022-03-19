@@ -6,12 +6,15 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 import Spinner from '../components/layout/Spinner'
+import RepoList from '../components/repos/RepoList'
 
 const User = () => {
-  const { user, getUser, loading } = useContext(GithubContext)
+  const { user, repos, getUser, getUserRepos, loading } =
+    useContext(GithubContext)
   const params = useParams()
   useEffect(() => {
     getUser(params.login)
+    getUserRepos(params.login)
   }, [])
 
   const {
@@ -32,7 +35,7 @@ const User = () => {
   } = user
 
   if (loading) return <Spinner />
-  const websiteUrl = ''
+  const websiteUrl = blog?.startsWith('http') ? blog : 'https://' + blog
 
   return (
     <>
@@ -156,6 +159,7 @@ const User = () => {
             </div>
           </div>
         </div>
+        <RepoList repos={repos} />
       </div>
     </>
   )
